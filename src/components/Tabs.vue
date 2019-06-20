@@ -7,7 +7,7 @@
             <router-link tag="li" to="/likeds">
                 <a>FILMES CURTIDOS</a>
             </router-link>
-            <router-link tag="li" to="/non-linkeds">
+            <router-link tag="li" to="/unlinkeds">
                 <a>FILMES NÃO CURTIDOS</a>
             </router-link>
         </ul>

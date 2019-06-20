@@ -21,7 +21,7 @@ export default new Router({
       component: Likeds
     },
     {
-      path: '/non-linkeds',
+      path: '/unlinkeds',
       name: 'UnLikeds',
       component: UnLikeds
     }

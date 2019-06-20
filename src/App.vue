@@ -1,11 +1,17 @@
 <template>
   <div id="app">
+    <Header />
   </div>
 </template>
 
 <script>
+import Header from './components/Header';
+
 export default {
   name: 'app',
+  components: {
+    Header
+  }
 }
 </script>
 
@@ -16,7 +22,8 @@ export default {
     padding: 0px;
     height: 100%;
   }
+
   #app {
-    background-color: #f0442e;
+    background-color: #b94c4c;
   }
 </style>

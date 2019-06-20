@@ -1,23 +1,22 @@
 <template>
-    <div id="Tabs">
-        <button class="active" @click="updateActiveTab($event)">FILMES NÃO CURADOS</button>
-        <button @click="updateActiveTab($event)">FILMES CURTIDOS</button>
-        <button @click="updateActiveTab($event)">FILMES NÃO CURTIDOS</button>
-    </div>
+    <nav id="Tabs">
+        <ul>
+            <router-link tag="li" to="/">
+                <a>FILMES NÃO CURADOS</a>
+            </router-link>
+            <router-link tag="li" to="/likeds">
+                <a>FILMES CURTIDOS</a>
+            </router-link>
+            <router-link tag="li" to="/non-linkeds">
+                <a>FILMES NÃO CURTIDOS</a>
+            </router-link>
+        </ul>
+    </nav>
 </template>
 
 <script>
 export default {
     name: 'Tabs',
-    methods: {
-        updateActiveTab: event => {
-            const tabClickedElement = event.target;
-            const currentTabActive = document.querySelector('button.active');
-            
-            currentTabActive.classList.remove('active');
-            tabClickedElement.classList.add('active');
-        }
-    }
 }
 </script>
 
@@ -29,22 +28,26 @@ export default {
     padding-top: 30px;
 }
 
-#Tabs button {
+#Tabs ul {
+    list-style:none;
+}
+
+#Tabs ul li { 
+    display: inline;
+    padding: 5px 10px;
+}
+
+#Tabs  ul li a {
     color: #FFF;
-    background: transparent;
-    border: transparent;
-    padding: 5px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
-@media screen and (min-width: 992px) {
-    #Tabs button {
-        margin-left: 4em;
-    }
-}
-
-#Tabs button.active {
+#Tabs  ul li.is-active  {
     border-bottom: 3px solid #FFF;
     font-weight: 600;
 }
+
 </style>
 
